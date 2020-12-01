@@ -35,15 +35,19 @@ namespace Scrum_Shot
         protected string email { get;}
         protected string password { get;}
         protected int priority { get; set; }
+        protected List<Project> projects { get; set; }
 
-        List<Project> projects;
+        void AddProject(Project newProject)
+        {
+            projects.Add(newProject);
+        }
 
     }
     class Admin : User
     {
         public Admin(int _userID, int _persID, string _firstname, string _lastname, string _email) : base(_userID,_persID,_firstname,_lastname,_email)
         {
-            priority = 0;
+            this.priority = 0;
         }
     }
     class ScrumMaster : User
@@ -71,6 +75,11 @@ namespace Scrum_Shot
     {
         int projectID;
         string projectName;
+
+        public override string ToString()
+        {
+            return this.projectName.ToString();
+        }
 
     }
 }
