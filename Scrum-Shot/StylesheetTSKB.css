@@ -1,0 +1,13 @@
+﻿body {
+    font-family: Verdana, "Lucida Sans Unicode", sans-serif
+}
+table {
+    border: 1px solid;
+    width: 100%; 
+}
+td,th{
+    border: 1px solid;
+}
+.heightofTable {
+    height: 3000px;
+}
