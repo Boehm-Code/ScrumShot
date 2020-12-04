@@ -10,6 +10,8 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            Welcome to index.aspx!
+            <asp:Button ID="btn_signOut" runat="server" OnClick="btn_signOut_Click" Text="sign out" />
         </div>
     </form>
 </body>

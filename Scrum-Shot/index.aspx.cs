@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.Security;
 
 namespace Scrum_Shot
 {
@@ -14,6 +15,12 @@ namespace Scrum_Shot
 
         }
 
+
+    protected void btn_signOut_Click(object sender, EventArgs e)
+    {
+        FormsAuthentication.SignOut();
+        Response.Redirect("~/Login.aspx");
+    }
     }
     public abstract class User
     {
@@ -25,7 +32,6 @@ namespace Scrum_Shot
             this.Lastname = _lastname;
             this.Email = _email;
         }
-
 
 
         protected int UserID { get;}
@@ -104,8 +110,6 @@ namespace Scrum_Shot
         bool inProgress;
         bool done;
         User editedBy;
-
-
 
 
 
