@@ -15,71 +15,80 @@ namespace Scrum_Shot
         }
 
     }
-    abstract class User
+    public abstract class User
     {
         public User(int _userID, int _persID, string _firstname, string _lastname, string _email)
         {
-            this.userID = _userID;
-            this.persID = _persID;
-            this.firstname = _firstname;
-            this.lastname = _lastname;
-            this.email = _email;
+            this.UserID = _userID;
+            this.PersID = _persID;
+            this.Firstname = _firstname;
+            this.Lastname = _lastname;
+            this.Email = _email;
         }
 
 
 
-        protected int userID { get;}
-        protected int persID { get;}
-        protected string firstname { get;}
-        protected string lastname { get;}
-        protected string email { get;}
-        protected string password { get;}
-        protected int priority { get; set; }
-        protected List<Project> projects { get; set; }
-
-        void AddProject(Project newProject)
+        protected int UserID { get;}
+        protected int PersID { get;}
+        protected string Firstname { get;}
+        protected string Lastname { get;}
+        protected string Email { get;}
+        protected string Password { get;}
+        protected int Priority { get; set; }
+        protected List<Project> Projects { get; }
+        public void AddProject(Project newProject)
         {
-            projects.Add(newProject);
+            Projects.Add(newProject);
         }
 
     }
-    class Admin : User
+    public class Admin : User
     {
         public Admin(int _userID, int _persID, string _firstname, string _lastname, string _email) : base(_userID,_persID,_firstname,_lastname,_email)
         {
-            this.priority = 0;
+            this.Priority = 0;
+        }
+        
+        public static void AddPersonToProject(Project project, User userToAdd)
+        {
+            project.Participants.Add(userToAdd);
+            userToAdd.AddProject(project);
         }
     }
-    class ScrumMaster : User
+        
+    public class ScrumMaster : User
     {
         public ScrumMaster(int _userID, int _persID, string _firstname, string _lastname, string _email) : base(_userID, _persID, _firstname, _lastname, _email)
         {
-            priority = 1;
+            Priority = 1;
         }
     }
-    class ProductOwner : User
+    public class ProductOwner : User
     {
         public ProductOwner(int _userID, int _persID, string _firstname, string _lastname, string _email) : base(_userID, _persID, _firstname, _lastname, _email)
         {
-            priority = 2;
+            Priority = 2;
         }
     }
-    class TeamMember : User
+    public class TeamMember : User
     {
         public TeamMember(int _userID, int _persID, string _firstname, string _lastname, string _email) : base(_userID, _persID, _firstname, _lastname, _email)
         {
-            priority = 3;
+            Priority = 3;
         }
     }
     public class Project
     {
         int projectID;
         string projectName;
+        public List<User> participants = new List<User>();
 
         public override string ToString()
         {
             return this.projectName.ToString();
         }
-
+        public int PropertyID { get; set; }
+        public string ProjectName { get; set; }
+        public List<User> Participants { get; }
     }
 }
