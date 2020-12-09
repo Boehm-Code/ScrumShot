@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -14,7 +13,6 @@ namespace Scrum_Shot
         {
 
         }
-
 
     protected void btn_signOut_Click(object sender, EventArgs e)
     {
@@ -33,7 +31,6 @@ namespace Scrum_Shot
             this.Email = _email;
         }
 
-
         protected int UserID { get;}
         protected int PersID { get;}
         protected string Firstname { get;}
@@ -46,7 +43,6 @@ namespace Scrum_Shot
         {
             Projects.Add(newProject);
         }
-
     }
     public class Admin : User
     {

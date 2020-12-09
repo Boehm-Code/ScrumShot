@@ -18,16 +18,22 @@ namespace Scrum_Shot
             string password = txt_password.Text;
             string username = txt_username.Text;
 
-            DataBase db = new DataBase();
+            try
+            {
+                DataBase db = new DataBase();
+                string passwordFromDB = db.ExecuteScalar(
+                       $"SELECT Password FROM usersscrumshot WHERE Email = '{username}'"
+                       ).ToString().ToUpper();
 
-            string passwordFromDB = db.ExecuteScalar(
-                $"SELECT Password FROM usersscrumshot WHERE Email = '{username}'"
-                ).ToString().ToUpper();
+                string passwordAsHash = GetSHA1(password);
 
-            string passwordAsHash = GetSHA1(password);
-
-            if (passwordAsHash == passwordFromDB) FormsAuthentication.RedirectFromLoginPage(username, false);
-            else lbl_errorMessage.Text = "The username or the password are invalid.";
+                if (passwordAsHash == passwordFromDB) FormsAuthentication.RedirectFromLoginPage(username, false);
+                else lbl_errorMessage.Text = "The username or the password are invalid.";
+            }
+            catch (Exception ex)
+            {
+                lbl_errorMessage.Text = "An error occured: " + ex.Message;
+            }
         }
 
         public static string GetSHA1(string value)
