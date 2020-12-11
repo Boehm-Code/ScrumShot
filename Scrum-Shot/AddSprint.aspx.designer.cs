@@ -51,6 +51,24 @@ namespace Scrum_Shot
         protected global::System.Web.UI.WebControls.TextBox txt_Workhours;
 
         /// <summary>
+        /// rfv_workhours control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_workhours;
+
+        /// <summary>
+        /// rv_workhours control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator rv_workhours;
+
+        /// <summary>
         /// lbl_StartDate control.
         /// </summary>
         /// <remarks>
@@ -69,6 +87,15 @@ namespace Scrum_Shot
         protected global::System.Web.UI.WebControls.TextBox txt_StartDate;
 
         /// <summary>
+        /// rfv_startDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_startDate;
+
+        /// <summary>
         /// lbl_EndDate control.
         /// </summary>
         /// <remarks>
@@ -85,5 +112,32 @@ namespace Scrum_Shot
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_EndDate;
+
+        /// <summary>
+        /// rfv_endDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_endDate;
+
+        /// <summary>
+        /// CompareValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator1;
+
+        /// <summary>
+        /// lbl_Info control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_Info;
     }
 }

@@ -24,6 +24,15 @@ namespace Scrum_Shot
 
         protected void btn_AddSprint_Click(object sender, EventArgs e)
         {
+            if(Page.IsValid)
+            {
+                int workhours = Convert.ToInt32(txt_Workhours.Text);
+                DateTime startDate = Convert.ToDateTime(txt_StartDate.Text);
+                DateTime endDate = Convert.ToDateTime(txt_EndDate.Text);
+                lbl_Info.Text = "data ok";
+
+            }
+            
 
         }
     }
