@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Web.Security;
 
 namespace Scrum_Shot
@@ -15,12 +11,11 @@ namespace Scrum_Shot
 
         }
 
-
-    protected void btn_signOut_Click(object sender, EventArgs e)
-    {
-        FormsAuthentication.SignOut();
-        Response.Redirect("~/Login.aspx");
-    }
+        protected void btn_signOut_Click(object sender, EventArgs e)
+        {
+            FormsAuthentication.SignOut();
+            FormsAuthentication.RedirectToLoginPage();
+        }
     }
     public abstract class User
     {
@@ -33,35 +28,32 @@ namespace Scrum_Shot
             this.Email = _email;
         }
 
-
-        protected int UserID { get;}
-        protected int PersID { get;}
-        protected string Firstname { get;}
-        protected string Lastname { get;}
-        protected string Email { get;}
-        protected string Password { get;}
+        protected int UserID { get; }
+        protected int PersID { get; }
+        protected string Firstname { get; }
+        protected string Lastname { get; }
+        protected string Email { get; }
+        protected string Password { get; }
         protected int Priority { get; set; }
         protected List<Project> Projects { get; }
         public void AddProject(Project newProject)
         {
             Projects.Add(newProject);
         }
-
     }
     public class Admin : User
     {
-        public Admin(int _userID, int _persID, string _firstname, string _lastname, string _email) : base(_userID,_persID,_firstname,_lastname,_email)
+        public Admin(int _userID, int _persID, string _firstname, string _lastname, string _email) : base(_userID, _persID, _firstname, _lastname, _email)
         {
             this.Priority = 0;
         }
-        
+
         public static void AddPersonToProject(Project project, User userToAdd)
         {
             project.Participants.Add(userToAdd);
             userToAdd.AddProject(project);
         }
     }
-        
     public class ScrumMaster : User
     {
         public ScrumMaster(int _userID, int _persID, string _firstname, string _lastname, string _email) : base(_userID, _persID, _firstname, _lastname, _email)
@@ -97,7 +89,6 @@ namespace Scrum_Shot
         public string ProjectName { get; set; }
         public List<User> Participants { get; }
     }
-
     public class ProductBacklog
     {
         List<ProductBacklogPoint> backlogPoints;
@@ -113,10 +104,10 @@ namespace Scrum_Shot
 
 
 
-        public string Description{ get; set; }
+        public string Description { get; set; }
         public int StoryPoints { get; set; }
         public bool InProgress { get; set; }
         public bool Done { get; set; }
-        public User EditedBy{ get; set; }
+        public User EditedBy { get; set; }
     }
 }
