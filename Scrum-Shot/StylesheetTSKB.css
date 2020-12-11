@@ -9,5 +9,32 @@ td,th{
     border: 1px solid;
 }
 .heightofTable {
-    height: 3000px;
+    height: 100px;
+}
+div#dragBox {
+    position: absolute;
+    top: 54px;
+    left: 25px;
+    width: 130px;
+    background-color: #000000;
+    cursor: move;
+    margin-top: 0px;
+}
+div#dragBox h3 {
+    margin: 0;
+    height: 25px;
+    padding: 0;
+    color: #F0F0F0;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 25px;
+}
+
+div#dragContBox {
+    margin: 2px;
+    background-color: #C0C0C0;
+    padding: 5px;
+    font-size: 12px;
+    cursor: default;
 }

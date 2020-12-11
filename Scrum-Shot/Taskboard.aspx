@@ -10,33 +10,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Taskboard</title>
 
-    <style type="text/css">
-div#dragBox {
-  position: absolute;
-  top: 50px;
-  left: 50px;
-  width: 130px;
-  background-color: #000000;
-  cursor: move;
-}
-div#dragBox h3 {
-  margin: 0;
-  height: 25px;
-  padding: 0;
-  color: #F0F0F0;
-  font-size: 14px;
-  font-weight: bold;
-  text-align: center;
-  line-height: 25px;
-}
-div#dragContBox {
-  margin: 2px;
-  background-color: #C0C0C0;
-  padding: 5px;
-  font-size: 12px;
-  cursor: default;
-}
-</style>
+
   <script language="javascript" type="text/javascript">
   var dragEle = null;
   var eleX = 0;
@@ -83,13 +57,19 @@ div#dragContBox {
                     <th>Done</th>
                 </tr>
                 <tr>
-                    <td class="heightofTable"></td>
-                    <td class="heightofTable"></td>
-                    <td class="heightofTable"></td>
-                    <td class="heightofTable"></td>
+
+                    <td class="heightofTable">
+                        <div id="dragContBox">hallo</div>  
+
+                    </td>
+                    <td class="heightofTable">&nbsp;</td>
+                    <td class="heightofTable">&nbsp;</td>
+                    <td class="heightofTable">&nbsp;</td>
                 </tr>
             </table>
+           
         </div>        
+       
     </form>
 </body>
 </html>
