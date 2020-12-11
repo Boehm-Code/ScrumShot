@@ -24,22 +24,22 @@ namespace Scrum_Shot
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// txt_username control.
+        /// txt_email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_username;
+        protected global::System.Web.UI.WebControls.TextBox txt_email;
 
         /// <summary>
-        /// RequiredFieldValidator1 control.
+        /// RequiredFieldValidator_email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator_email;
 
         /// <summary>
         /// txt_password control.
@@ -51,13 +51,13 @@ namespace Scrum_Shot
         protected global::System.Web.UI.WebControls.TextBox txt_password;
 
         /// <summary>
-        /// RequiredFieldValidator2 control.
+        /// RequiredFieldValidator_password control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator_password;
 
         /// <summary>
         /// btn_login control.
