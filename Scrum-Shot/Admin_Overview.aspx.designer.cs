@@ -11,7 +11,7 @@ namespace Scrum_Shot
 {
 
 
-    public partial class index
+    public partial class Admin_Overview
     {
 
         /// <summary>
@@ -24,12 +24,21 @@ namespace Scrum_Shot
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// btn_signOut control.
+        /// btn_CreateProject control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_signOut;
+        protected global::System.Web.UI.WebControls.Button btn_CreateProject;
+
+        /// <summary>
+        /// btn_UserEnquiries control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_UserEnquiries;
     }
 }
