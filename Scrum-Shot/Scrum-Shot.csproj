@@ -89,6 +89,9 @@
     <Compile Include="Admin_View.aspx.designer.cs">
       <DependentUpon>Admin_View.aspx</DependentUpon>
     </Compile>
+    <Content Include="login.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
     <Compile Include="DataBase.cs" />
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
@@ -117,6 +120,12 @@
     </Compile>
     <Compile Include="ProjectOverview.aspx.designer.cs">
       <DependentUpon>ProjectOverview.aspx</DependentUpon>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AddSprint.aspx.cs">

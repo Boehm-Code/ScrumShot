@@ -12,8 +12,12 @@ namespace DataBaseClass
         public DataBase()
         {
             string connString;
-            connString = WebConfigurationManager.ConnectionStrings["AppDbFromExt"].ConnectionString;
-            //connString = WebConfigurationManager.ConnectionStrings["AppDbFromInt"].ConnectionString;
+
+            //connString = WebConfigurationManager.ConnectionStrings["AppDbFromExt"].ConnectionString;
+            connString = WebConfigurationManager.ConnectionStrings["AppDbFromInt"].ConnectionString;
+
+            //connString = WebConfigurationManager.ConnectionStrings["AppDB"].ConnectionString;
+
             connection = new OdbcConnection(connString);
         }
 
