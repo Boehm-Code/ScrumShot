@@ -33,6 +33,7 @@
                 </tr>
             </table>
         </div>
+        <asp:Button ID="btnTestToRedirect" runat="server" OnClick="btnTestToRedirect_Click" Text="Test Redirect" />
     </form>
 </body>
 </html>

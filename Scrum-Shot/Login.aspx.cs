@@ -41,5 +41,17 @@ namespace Scrum_Shot
             }
             return sh1;
         }
+
+        protected void btnTestToRedirect_Click(object sender, EventArgs e)
+        {
+            if (Response.IsClientConnected)
+            {
+                Response.Redirect("ProductBacklog.aspx", false);
+            }
+            else
+            {
+                Response.End();
+            }
+        }
     }
 }

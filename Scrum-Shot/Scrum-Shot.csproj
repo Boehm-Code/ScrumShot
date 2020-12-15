@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="index.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="ProductBacklog.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -87,7 +88,16 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ProductBacklog.aspx.cs">
+      <DependentUpon>ProductBacklog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductBacklog.aspx.designer.cs">
+      <DependentUpon>ProductBacklog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductBacklog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
