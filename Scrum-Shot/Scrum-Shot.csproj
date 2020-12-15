@@ -139,6 +139,7 @@
     </Compile>
     <Compile Include="ProjectOverview.aspx.designer.cs">
       <DependentUpon>ProjectOverview.aspx</DependentUpon>
+   </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -161,7 +162,6 @@
     <Compile Include="Sprintplan.aspx.designer.cs">
       <DependentUpon>Sprintplan.aspx</DependentUpon>
     </Compile>
-  </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
