@@ -17,7 +17,6 @@ namespace DataBaseClass
             connString = WebConfigurationManager.ConnectionStrings["AppDbFromInt"].ConnectionString;
 
             //connString = WebConfigurationManager.ConnectionStrings["AppDB"].ConnectionString;
-
             connection = new OdbcConnection(connString);
         }
 

@@ -64,6 +64,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+
+        <Content Include="Project.aspx" />
+    <Content Include="stories.aspx" />
     <Content Include="Admin_Overview.aspx" />
     <Content Include="Admin_View.aspx" />
     <Content Include="index.aspx" />
@@ -100,6 +103,22 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Project.aspx.cs">
+      <DependentUpon>Project.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Project.aspx.designer.cs">
+      <DependentUpon>Project.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="stories.aspx.cs">
+      <DependentUpon>stories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="stories.aspx.designer.cs">
+      <DependentUpon>stories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Story.cs" />
     <Compile Include="Member_View.aspx.cs">
       <DependentUpon>Member_View.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
