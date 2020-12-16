@@ -15,16 +15,15 @@ namespace Scrum_Shot
 
         protected void btn_login_Click(object sender, EventArgs e)
         {
-            string password = txt_password.Text;
-            string email = txt_email.Text;
-
             if (Page.IsValid)
             {
+                string password = txt_password.Text;
+                string email = txt_email.Text;
                 try
                 {
                     DataBase db = new DataBase();
                     string passwordFromDB = db.ExecuteScalar(
-                           $"SELECT Password FROM usersscrumshot WHERE Email = '{email}'"
+                           $"SELECT password FROM usersscrumshot WHERE email = '{email}'"
                            ).ToString().ToUpper();
 
                     string passwordAsHash = GetSHA1(password);
@@ -32,12 +31,12 @@ namespace Scrum_Shot
                     FormsAuthentication.Initialize();
 
                     if (passwordAsHash == passwordFromDB) FormsAuthentication.RedirectFromLoginPage(email, false);
-                    else lbl_errorMessage.Text = "Info: The username or the password are invalid.";
+                    else throw new Exception("Password is invalid.");
                 }
                 catch (Exception ex)
                 {
-                    lbl_errorMessage.Text = "Info: An error occured: " + ex.Message;
-                } 
+                    lbl_errorMessage.Text = "Info: The username or the password are invalid.";
+                }
             }
         }
 
